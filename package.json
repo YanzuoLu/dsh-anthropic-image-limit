@@ -1,0 +1,45 @@
+{
+  "name": "dsh-anthropic-image-limit",
+  "version": "0.1.0",
+  "description": "Resize images whose longest side exceeds Anthropic's limit before DeepSeek Harness sends them",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "anthropic",
+    "claude",
+    "image"
+  ],
+  "license": "MIT",
+  "author": "Yanzuo Lu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YanzuoLu/dsh-anthropic-image-limit.git"
+  },
+  "homepage": "https://github.com/YanzuoLu/dsh-anthropic-image-limit#readme",
+  "bugs": {
+    "url": "https://github.com/YanzuoLu/dsh-anthropic-image-limit/issues"
+  },
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "sharp": "0.35.5"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "~3.18.4"
+  }
+}

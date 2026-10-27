@@ -1,0 +1,6 @@
+# dsh-anthropic-image-limit bundle patch: mounts the plugin that keeps every
+# image sent to Anthropic within its per-side limit.
+
+- insert:
+    - id: anthropic-image-limit
+      name: dsh-anthropic-image-limit
